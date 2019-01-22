@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;padding:0;
+    }
+    #nav{
+        height:40px;
+        width:600px;
+        margin:0 auto;
+        background-color:#eee;
+    }
+    a{
+        text-decoration:none;
+        color:#000;
+        display:block;
+       width:90px;
+    }
+    ul{
+        list-style:none;
+    }
+    ul li{
+        float:left;
+        text-align:center;
+        line-height:40px;
+        position:relative;
+    }
+    ul li ul{
+        position:absolute;
+        top:40px;
+        left:0;
+        width:90px;
+        display:none;
+    }
+    ul li ul li {
+        float:none;
+        background-color:#03f;
+        border-left:none;
+        margin-top:2px;
+    }
+    </style>
+    <script src="./js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+     function showsubmenu(li){
+         var submenu=li.getElementsByTagName("ul")[0];
+         submenu.style.display="block";
+     }
+     function hidesubmenu(li){
+         var submenu=li.getElementsByTagName("ul")[0];
+         submenu.style.display="none";
+     }
+    </script>
+    
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="#">首页</a></li>
+            <li onmouseover="showsubmenu(this)" onmouseout="hidesubmenu(this)"><a href="#">课程大厅</a>
+                <ul>
+                    <li><a href="#">javascript</a></li>
+                    <li><a href="#">css</a></li>
+                    <li><a href="#">html</a></li>
+                </ul>
+            </li>
+            <li onmouseover="showsubmenu(this)" onmouseout="hidesubmenu(this)"><a href="#">学习中心</a>
+                <ul>
+                    <li><a href="#">视频学习</a></li>
+                    <li><a href="#">案例学习</a></li>
+                </ul>
+            </li>
+            <li><a href="#">经典案例</a></li>
+            <li><a href="#">关于我们</a></li>
+        </ul>
+    </div>
+</body>
+</html>
