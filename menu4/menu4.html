@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .top-nav{
+        font-size:12px;
+        font-weight:bold;
+        list-style:none;
+        border-bottom:8px solid #DC4e1b;
+        overflow:auto;
+        height:60px;
+    }
+    .top-nav li{
+       margin-right:1px;
+        float:left;
+    }
+    .top-nav li a{
+        line-height:60px;
+        text-decoration: none;
+        background-color:#ddd;
+        color:#666;
+        display:block;
+        width:80px;
+        text-align:center;
+    }
+    .top-nav li a span{
+        display:none;
+    }
+    .top-nav li a:hover span{
+        display:block;
+        background-color:#DC4e1b;
+        color:#fff;
+    }
+    .top-nav li a:hover{
+        margin-top:-60px;
+    }
+    </style>
+</head>
+<body>
+    <ul class="top-nav">
+        <li><a href="#">首页<span>Home</span></a></li>
+        <li><a href="#">课程大厅<span>Course</span></a></li>
+        <li><a href="#">学习中心<span>Learn</span></a></li>
+        <li><a href="#">关于我们<span>About</span></a></li>
+    </ul>
+</body>
+</html>
