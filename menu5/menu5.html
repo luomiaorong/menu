@@ -29,7 +29,7 @@
         text-align:center;
     }
     .top-nav li ul{
-        display:block;
+        display:none;
         list-style:none;
         padding:0;
         position:absolute;
@@ -44,10 +44,11 @@
     }
     .corner{
         display:block;
+       
         height:11px;
         margin-left:31px;
-        margin-top:20px;
-       background:#3f240e;
+       color:#3f240e;
+       font-size:14px;
     }
     .top-nav li ul li{
         height:34px;
@@ -56,14 +57,14 @@
     </style>
 <script src="./js//jquery-3.3.1.js"></script>
 <script>
-// $(document).ready(function(){
-//     $(".top-nav li").mouseenter(function(){
-//         $(this).find('ul').slideDown('1000');
-//     });
-//     $(".top-nav li").mouseleave(function(){
-//         $(this).find("ul").slideUp('1000');
-//     })
-// })
+$(document).ready(function(){
+    $(".top-nav li").mouseenter(function(){
+        $(this).find('ul').slideDown('1000');
+    });
+    $(".top-nav li").mouseleave(function(){
+        $(this).find("ul").slideUp('1000');
+    })
+})
 </script>
 </head>
 <body>
@@ -71,7 +72,7 @@
         <li><a href=""><span class="note">慕课网</span></a></li>
         <li><a href="">课程大厅</a>
              <ul>
-                 <span class="corner">△</span>
+                 <span class="corner">◆</span>
                  <li><a href="">前端课程</a></li>
                  <li><a href="">手机开发</a></li>
                  <li><a href="">后端开发</a></li>
